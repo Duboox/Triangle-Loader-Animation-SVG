@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        html, body {
+  background-color: #f3f3f3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+        svg#a1 polygon{
+            stroke-dasharray: 50;
+            animation: dashoffset 1.5s linear infinite;
+        }
+
+        @keyframes dashoffset {
+            to {
+                stroke-dashoffset: 100;
+            }
+        }
+
+        /* Second loader */
+        svg#a2{
+            /* animation: rotate 2.5s cubic-bezier(0.35, 0.04, 0.63, 0.95) infinite; */
+	        transform-origin: 50% 65%;
+        }
+        svg#a2 polygon{
+            stroke-dasharray: 17;
+	        animation: dash 2.5s cubic-bezier(0.35, 0.04, 0.63, 0.95) infinite;
+        }
+        @keyframes dash {
+            to {
+                stroke-dashoffset: 136;
+            }
+        }
+        @keyframes rotate {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+	
+    </style>
+</head>
+<body>
+    <h1>Triangle Loader</h1>
+
+    <div>
+            <svg id="a1" width="200px" height="200px" viewBox="-4 -1 38 28">
+                    <polygon fill="transparent"
+                    stroke="#2d2d2d"
+                    stroke-width="2"
+                    points="15,0 30,30 0,30">
+                    </polygon>
+                </svg>
+                <small>Joshua K.</small>
+            
+    </div>
+    <div>
+            <h1>Triangle Loader 2</h1>
+            <svg id="a2" width="100px" height="100px" viewBox="-3 -4 39 39">
+                    <polygon fill="#EFEFEF"
+                     stroke="#333333" 
+                     stroke-width="1" 
+                     points="16,0 32,32 0,32">
+                    </polygon>
+            </svg>
+    </div>
+</body>
+</html>
